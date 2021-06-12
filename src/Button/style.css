@@ -1,0 +1,18 @@
+.button {
+    max-width: 350px;
+    width: 100%;
+    background-color: #3ebd64;
+    padding: 10px;
+    margin: 50px auto;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: hsl(138, 51%, 69%);
+    color: #fff;
+    transition: 1s;
+}
