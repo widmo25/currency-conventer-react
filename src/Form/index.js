@@ -1,15 +1,14 @@
-import React from "react"
 import Button from "../Button"
 import "./style.css"
 
 const Form = () => {
 
-    const onFormSubmit = (event) => {
-        event.preventDefault()
+    const onFormSubmit = (event) =>{
+        event.preventDefault();
     }
 
-    return (
 
+    return (
         <form className="form" onSubmit={onFormSubmit}>
             <label className="form__label">
                 Wpisz kwotę*:
@@ -37,7 +36,7 @@ const Form = () => {
                     </label>
                 </li>
             </ul>
-            <Button />
+            <Button/>
         </form>
     )
 }
