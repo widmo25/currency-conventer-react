@@ -1,0 +1,9 @@
+.result {
+    margin: 50px auto;
+    max-width: 350px;
+    min-height: 80px;
+    padding: 25px;
+    background-color: #eee;
+    font-weight: bold;
+    border-radius: 10px;
+}
