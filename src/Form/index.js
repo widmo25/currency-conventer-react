@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Button from "../Button"
+import { currencies } from "../currencies";
+import { Input } from "./Input";
 import "./style.css"
+
 
 const Form = () => {
 
@@ -13,12 +16,6 @@ const Form = () => {
 
     const onChangeAmount = ({ target }) => {
         setAmount(target.value);
-    }
-
-    const [currency,setCurrency] = useState(false);
-
-    const onCheckCurrency = ({target}) =>{
-        setCurrency(target.checked)
     }
 
     return (
@@ -40,39 +37,19 @@ const Form = () => {
             <ul className="form__listRadio">
                 <li>
                     <label className="form__label">
-                        <input
-                            className="form__input"
-                            type="radio"
-                            name="currency"
-                            checked={currency}
-                            onChange={onCheckCurrency}
-                            value="eur" />
+                        <Input currencies={currencies} />
                         Euro
                     </label>
                 </li>
                 <li>
                     <label className="form__label">
-                        <input
-                            className="form__input"
-                            type="radio"
-                            name="currency"
-                            value="usd" 
-                            checked={currency}
-                            onChange={onCheckCurrency}
-                            />
+                        <Input currencies={currencies} />
                         Dolar Amerykański
                     </label>
                 </li>
                 <li>
                     <label className="form__label">
-                        <input
-                            className="form__input"
-                            type="radio"
-                            name="currency"
-                            value="pound" 
-                            checked={currency}
-                            onChange={onCheckCurrency}
-                            />
+                        <Input currencies={currencies} />
                         Funt Brytyjski
                     </label>
                 </li>
