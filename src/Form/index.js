@@ -9,7 +9,7 @@ const Form = () => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(`${amount} , ${currency}`)
+        console.log(`${amount}`)
     }
 
     const [amount, setAmount] = useState("");
