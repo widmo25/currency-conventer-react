@@ -6,12 +6,19 @@ const Form = () => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        console.log(`${amount} , ${currency}`)
     }
 
     const [amount, setAmount] = useState("");
 
     const onChangeAmount = ({ target }) => {
         setAmount(target.value);
+    }
+
+    const [currency,setCurrency] = useState(false);
+
+    const onCheckCurrency = ({target}) =>{
+        setCurrency(target.checked)
     }
 
     return (
@@ -37,6 +44,8 @@ const Form = () => {
                             className="form__input"
                             type="radio"
                             name="currency"
+                            checked={currency}
+                            onChange={onCheckCurrency}
                             value="eur" />
                         Euro
                     </label>
@@ -47,7 +56,10 @@ const Form = () => {
                             className="form__input"
                             type="radio"
                             name="currency"
-                            value="usd" />
+                            value="usd" 
+                            checked={currency}
+                            onChange={onCheckCurrency}
+                            />
                         Dolar Amerykański
                     </label>
                 </li>
@@ -57,7 +69,10 @@ const Form = () => {
                             className="form__input"
                             type="radio"
                             name="currency"
-                            value="pound" />
+                            value="pound" 
+                            checked={currency}
+                            onChange={onCheckCurrency}
+                            />
                         Funt Brytyjski
                     </label>
                 </li>
