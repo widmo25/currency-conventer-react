@@ -1,4 +1,4 @@
-export const currencies = () => [
+export const currencies = [
     {
         short: "usd",
         name: "Dolar Amerykański",
