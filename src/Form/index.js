@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../Button"
 import { currencies } from "../currencies";
-import { Input } from "./Input";
+import { Radio } from "./Radio";
 import "./style.css"
 
 
@@ -9,7 +9,6 @@ const Form = () => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(`${amount}`)
     }
 
     const [amount, setAmount] = useState("");
@@ -34,26 +33,7 @@ const Form = () => {
                 />
             </label>
             <h2>Wybierz Walute:</h2>
-            <ul className="form__listRadio">
-                <li>
-                    <label className="form__label">
-                        <Input currencies={currencies} />
-                        Euro
-                    </label>
-                </li>
-                <li>
-                    <label className="form__label">
-                        <Input currencies={currencies} />
-                        Dolar Amerykański
-                    </label>
-                </li>
-                <li>
-                    <label className="form__label">
-                        <Input currencies={currencies} />
-                        Funt Brytyjski
-                    </label>
-                </li>
-            </ul>
+            <Radio currencies={currencies} />
             <Button />
         </form>
     )
