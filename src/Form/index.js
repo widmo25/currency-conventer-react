@@ -17,6 +17,11 @@ const Form = () => {
         setAmount(target.value);
     }
 
+    const [currency, setCurrency] = useState(false);
+
+    const onChangeCurrency = ({ target }) => {
+        setCurrency(target.checked)
+    }
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <label className="form__label">
@@ -33,7 +38,7 @@ const Form = () => {
                 />
             </label>
             <h2>Wybierz Walute:</h2>
-            <Radio currencies={currencies} />
+            <Radio currencies={currencies} onChangeCurrency={onChangeCurrency} checked={currency} />
             <Button />
         </form>
     )
