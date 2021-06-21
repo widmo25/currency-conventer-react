@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../Button"
 import { currencies } from "../currencies";
-import { Radio } from "./Radio";
+import { Select } from "./Select";
 import "./style.css"
 
 export const Form = ({ calculateResult }) => {
@@ -13,12 +13,9 @@ export const Form = ({ calculateResult }) => {
 
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState(currencies[0].short)
+
     const onChangeAmount = ({ target }) => {
         setAmount(target.value);
-    }
-
-    const onChangeCurrency = ({ target }) => {
-        setCurrency(target.value = currency.name)
     }
 
     return (
@@ -37,7 +34,7 @@ export const Form = ({ calculateResult }) => {
                 />
             </label>
             <h2>Wybierz Walutę:</h2>
-            <Radio onChangeCurrency={onChangeCurrency} />
+            <Select setCurrency={setCurrency} currency={currency} />
             <Button />
         </form>
     )
