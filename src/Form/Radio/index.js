@@ -9,7 +9,13 @@ const Radio = () => {
             {currencies.map(currency => (
                 < li key={currency.name} >
                     <label className="form__label">
-                        <input className="form__input" value={currency.rate} type="radio" name="currency" />
+                        <input
+                            className="form__input"
+                            value={currency.rate}
+                            type="radio"
+                            name="currency"
+                            required
+                        />
                         {currency.name}
                     </label>
                 </li>
