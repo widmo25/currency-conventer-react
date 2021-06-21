@@ -1,6 +1,6 @@
 import { currencies } from "../../currencies"
 
-const Radio = () => {
+const Radio = (onChangeCurrency) => {
 
 
 
@@ -13,8 +13,9 @@ const Radio = () => {
                             className="form__input"
                             value={currency.rate}
                             type="radio"
-                            name="currency"
+                            name={currency}
                             required
+                            onChange={() => onChangeCurrency}
                         />
                         {currency.name}
                     </label>
