@@ -8,20 +8,15 @@ export const Form = ({ calculateResult }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        calculateResult(currency,amount)
+        calculateResult(amount, currency)
     }
 
     const [amount, setAmount] = useState("");
-
+    const [currency, setCurrency] = useState(currencies[0].short)
     const onChangeAmount = ({ target }) => {
         setAmount(target.value);
     }
 
-    const [currency, setCurrency] = useState(currencies[0].short);
-
-    const onChangeCurrency = ({ target }) => {
-        setCurrency(target.value)
-    }
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <label className="form__label">
@@ -37,8 +32,8 @@ export const Form = ({ calculateResult }) => {
                     onChange={onChangeAmount}
                 />
             </label>
-            <h2>Wybierz Walute:</h2>
-            <Radio currencies={currencies} onChangeCurrency={onChangeCurrency} checked={currency} />
+            <h2>Wybierz Walutę:</h2>
+            <Radio />
             <Button />
         </form>
     )
