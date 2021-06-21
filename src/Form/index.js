@@ -4,11 +4,11 @@ import { currencies } from "../currencies";
 import { Radio } from "./Radio";
 import "./style.css"
 
-
-const Form = () => {
+export const Form = ({ calculateResult }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        calculateResult(currency,amount)
     }
 
     const [amount, setAmount] = useState("");
@@ -17,10 +17,10 @@ const Form = () => {
         setAmount(target.value);
     }
 
-    const [currency, setCurrency] = useState(false);
+    const [currency, setCurrency] = useState(currencies[0].short);
 
     const onChangeCurrency = ({ target }) => {
-        setCurrency(target.checked)
+        setCurrency(target.value)
     }
     return (
         <form className="form" onSubmit={onFormSubmit}>
@@ -43,5 +43,3 @@ const Form = () => {
         </form>
     )
 }
-
-export default Form;
