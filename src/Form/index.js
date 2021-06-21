@@ -17,6 +17,10 @@ export const Form = ({ calculateResult }) => {
         setAmount(target.value);
     }
 
+    const onChangeCurrency = ({ target }) => {
+        setCurrency(target.value = currency.name)
+    }
+
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <label className="form__label">
@@ -33,7 +37,7 @@ export const Form = ({ calculateResult }) => {
                 />
             </label>
             <h2>Wybierz Walutę:</h2>
-            <Radio />
+            <Radio onChangeCurrency={onChangeCurrency} />
             <Button />
         </form>
     )
