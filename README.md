@@ -1,22 +1,18 @@
-# Getting Started with Create React App
+# Currency Conventer - React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
 https://widmo25.github.io/currency-conventer-react/
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies
+- HTML
+- CSS
+- JavaScript 
+- BEM
+- React
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## How to use
+![how to use](/img/animation.gif)
 
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
