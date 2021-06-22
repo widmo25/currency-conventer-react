@@ -12,7 +12,6 @@ const Select = ({ currency, setCurrency }) => {
                     value={currency}
                     onChange={({ target }) => setCurrency(target.value)}
                 >
-
                     {currencies.map((currency => (
                         <option
                             key={currency.short}
