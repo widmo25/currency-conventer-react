@@ -33,7 +33,7 @@ export const Form = ({ calculateResult }) => {
                     onChange={onChangeAmount}
                 />
             </label>
-            <h2>Wybierz Walutę:</h2>
+            <h2 className="form__header">Wybierz Walutę:</h2>
             <Select setCurrency={setCurrency} currency={currency} />
             <Button />
         </form>
