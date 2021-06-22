@@ -13,6 +13,6 @@ https://widmo25.github.io/currency-conventer-react/
 - React
 
 ## How to use
-![how to use](/img/animation.gif)
+![how to use](%PUBLIC_URL%/animation.gif)
 
 
