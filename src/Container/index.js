@@ -1,9 +1,9 @@
 import "./style.css";
-const Container = (props) =>{
+const Container = (props) => {
     return (
-        <div className="container">
+        <main className="container">
             {props.children}
-        </div>
+        </main>
     )
 }
 
