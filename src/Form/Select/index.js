@@ -1,9 +1,6 @@
 import { currencies } from "../../currencies"
 
 const Select = ({ currency, setCurrency }) => {
-
-
-
     return (
         <ul className="form__listSelect">
             <label className="form__label">
@@ -24,7 +21,6 @@ const Select = ({ currency, setCurrency }) => {
             </label>
         </ul >
     )
-
 }
 
 export { Select }
