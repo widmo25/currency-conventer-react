@@ -17,7 +17,7 @@ const Clock = () => {
     }
     )
     return (
-        <p className="clock">Dzisiaj jest {time.toLocaleDateString(undefined, {
+        <p className="clock">Dziśiaj jest {time.toLocaleDateString(undefined, {
             month: "long",
             weekday: "long",
             day: "numeric",
