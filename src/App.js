@@ -4,6 +4,7 @@ import Footer from "./Footer"
 import Result from "./Result"
 import { useState } from "react";
 import { currencies } from "./currencies";
+import Clock from "./Clock";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     return (
         <Container>
             <h1 className="container__header">Walutomat - Twój kantor w sieci </h1>
+            <Clock></Clock>
             <Form calculateResult={calculateResult} />
             <Result result={result} />
             <Footer />
