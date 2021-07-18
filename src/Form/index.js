@@ -21,7 +21,7 @@ export const Form = ({ calculateResult }) => {
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <label className="form__label">
-                Wpisz kwotę*:
+                <span>Wpisz kwotę*:</span>
                 <input
                     className="form__input"
                     value={amount}
@@ -33,7 +33,6 @@ export const Form = ({ calculateResult }) => {
                     onChange={onChangeAmount}
                 />
             </label>
-            <h2 className="form__header">Wybierz Walutę:</h2>
             <Select setCurrency={setCurrency} currency={currency} />
             <Button />
         </form>
