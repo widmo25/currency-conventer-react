@@ -1,9 +1,11 @@
 import { currencies } from "../../currencies"
+import "../style.css"
 
 const Select = ({ currency, setCurrency }) => {
     return (
         <ul className="form__listSelect">
             <label className="form__label">
+                Wybierz Walute*:
                 <select
                     className="form__input"
                     value={currency}
