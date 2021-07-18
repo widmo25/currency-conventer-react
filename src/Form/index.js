@@ -21,7 +21,7 @@ export const Form = ({ calculateResult }) => {
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <label className="form__label">
-                <span>Wpisz kwotę*:</span>
+                Wpisz kwotę*:
                 <input
                     className="form__input"
                     value={amount}
