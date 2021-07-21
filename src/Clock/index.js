@@ -13,18 +13,23 @@ const Clock = () => {
             (
                 clearInterval(clockInterval)
             )
-        }
-    }
-    )
-    return (
-        <p className="clock">Dzisiaj jest {time.toLocaleDateString(undefined, {
+        };
+    });
+
+    const formatedDate = () => {
+        time.toLocaleString(undefined, {
             month: "long",
             weekday: "long",
             day: "numeric",
             hour: "numeric",
             minute: "numeric",
             second: "numeric"
-        })}</p>
+        });
+    };
+
+
+    return (
+        <p className="clock">Dzisiaj jest {""} {time.toLocaleString(formatedDate)}</p>
     )
 }
 
