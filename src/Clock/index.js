@@ -16,20 +16,22 @@ const Clock = () => {
         };
     });
 
-    const formatedDate = () => {
+    const formatedDate = (time) =>
         time.toLocaleString(undefined, {
             month: "long",
             weekday: "long",
             day: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-            second: "numeric"
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
         });
-    };
-
 
     return (
-        <p className="clock">Dzisiaj jest {""} {time.toLocaleString(formatedDate)}</p>
+        <p className="clock">
+            Dzisiaj jest
+            {" "}
+            {formatedDate(time)}
+        </p>
     )
 }
 
